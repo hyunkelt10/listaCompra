@@ -18,12 +18,10 @@ class ResultActivity : AppCompatActivity() {
             for (key in keys){
                 b.tvLista.text = b.tvLista.text.toString()
                     .plus("$key:\t\t\t${myExtras.get(key)}\n")
-                println("key: $key\tvalue: ${myExtras.get(key)}")
             }
         }
         b.btnVolver.setOnClickListener {
-
-
+            onBackPressed()
         }
 
     }
