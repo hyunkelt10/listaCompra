@@ -15,14 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
-        lista.put("art1","2.3")
     }
     fun addItem (view:View){
         if (b.etArticulo.text.isNotEmpty() and b.etArticulo.text.isNotEmpty()){
             lista.put(b.etArticulo.text.toString(), b.etPrecio.text.toString())
             b.etArticulo.text.clear()
             b.etPrecio.text.clear()
-            msj(lista.toString())
+            // msj(lista.toString())
         } else {
             msj("Todos los campos son obligatorios")
         }
