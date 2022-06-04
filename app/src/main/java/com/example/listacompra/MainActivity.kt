@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
     }
+
     fun addItem (view:View){
         if (b.etArticulo.text.isNotEmpty() and b.etArticulo.text.isNotEmpty()){
             lista.put(b.etArticulo.text.toString(), b.etPrecio.text.toString())
@@ -34,7 +35,9 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(myIntent)
     }
+
     fun msj (str:String){
         Toast.makeText(this, str, Toast.LENGTH_LONG).show()
     }
+
 }
